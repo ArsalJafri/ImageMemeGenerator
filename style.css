@@ -1,3 +1,4 @@
+/* General Reset and Body Styling */
 * {
     box-sizing: border-box;
 }
@@ -9,32 +10,39 @@ body {
 
 main {
     padding: 36px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
+/* Header Styling */
 .header {
     display: flex;
     align-items: center;
-    height: 65px;
+    height: 100px; /* Increased header height */
     background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
     color: white;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: space-between; /* Ensure items are spaced correctly */
 }
 
 .header--image {
     height: 100%;
-    margin-right: 6px;
+    margin-right: 12px; /* Increased margin for better spacing */
+    width: 80px; /* Set larger width for the header image */
 }
 
 .header--title {
-    font-size: 1.25rem;
+    font-size: 1.75rem; /* Increased font size */
     margin-right: auto;
 }
 
 .header--project {
-    font-size: 0.75rem;
+    font-size: 1.2rem; /* Increased font size */
     font-weight: 500;
 }
 
+/* Form Styling */
 .form {
     display: grid;
     grid-template: 40px 40px / 1fr 1fr;
@@ -47,6 +55,8 @@ main {
     border-radius: 5px;
     border: 1px solid #D5D4D8;
     text-indent: 5px;
+    padding: 10px; /* Increased padding for better text placement */
+    font-size: 1.1rem; /* Increased font size */
 }
 
 .form--button {
@@ -57,14 +67,28 @@ main {
     color: white;
     border: none;
     cursor: pointer;
+    padding: 12px; /* Increased padding for better button size */
+    font-size: 1.1rem; /* Increased font size */
+    transition: background 0.3s ease; /* Smooth hover transition */
 }
 
+.form--button:hover {
+    background: linear-gradient(90.41deg, #5A0F7A 1.14%, #8D14B7 100%);
+}
+
+/* Meme Styling */
 .meme {
     position: relative;
+    max-width: 100%; /* Ensure the meme container uses full width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin: 0 auto;
 }
 
 .meme--image {
-    max-width: 100%;
+    width: 900px; /* Set the desired width for the meme image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 600px; /* Set larger maximum height */
     border-radius: 3px;
 }
 
@@ -75,24 +99,20 @@ main {
     left: 50%;
     transform: translateX(-50%);
     margin: 15px 0;
-    padding: 0 5px;
+    padding: 0 10px; /* Increased padding for better readability */
     font-family: impact, sans-serif;
-    font-size: 2em;
+    font-size: 5.5em; /* Increased font size */
     text-transform: uppercase;
     color: white;
     letter-spacing: 1px;
     text-shadow:
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
+        1px 1px 2px #000,
+        -1px -1px 2px #000,
+        1px -1px 2px #000,
+        -1px 1px 2px #000;
 }
 
+/* Bottom and Top Positioning */
 .bottom {
     bottom: 0;
 }
@@ -100,3 +120,45 @@ main {
 .top {
     top: 0;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 15px;
+    }
+
+    .header--title {
+        font-size: 1.5rem; /* Adjusted for smaller screens */
+    }
+
+    .header--project {
+        font-size: 1rem; /* Adjusted for smaller screens */
+    }
+
+    .form {
+        grid-template: repeat(2, auto) / 1fr;
+        gap: 10px;
+    }
+
+    .form--input {
+        font-size: 1rem; /* Adjusted for smaller screens */
+    }
+
+    .form--button {
+        font-size: 1rem; /* Adjusted for smaller screens */
+    }
+
+    .meme--text {
+        font-size: 2.5em; /* Adjusted for smaller screens */
+    }
+
+    .meme {
+        max-width: 400px; /* Adjusted for smaller screens */
+    }
+}
+
+
+

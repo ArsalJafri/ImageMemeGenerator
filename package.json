@@ -1,19 +1,16 @@
 {
-  "name": "Scrim-s0n6v0oo4c",
-  "description": "https://v2.scrimba.com/learn-react-c0e/~045",
+  "name": "image-meme-generator",
   "scripts": {
-    "watch": "webpack -w",
-    "build": "webpack"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "webpack": "^2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "babel-core": "^6.0",
-    "babel-loader": "^7.0",
-    "babel-preset-env": "*",
-    "babel-preset-react": "*"
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
   }
 }
